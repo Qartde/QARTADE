@@ -27,10 +27,11 @@ if (fs.existsSync('settings.env')) {
 module.exports = {
     session: process.env.SESSION_ID || '',
     PREFIXE: process.env.PREFIX || ".",
-    OWNER_NAME: process.env.OWNER_NAME || "𝐛𝐦𝐛 𝐭𝐞𝐜𝐡",
-    NUMERO_OWNER: process.env.NUMERO_OWNER || "",
-    BOT: process.env.BOT_NAME || '𝐛𝐦𝐛 𝐭𝐞𝐜𝐡',
-    URL: process.env.BOT_MENU_LINKS || 'https://url.bmbxmd.workers.dev/bmbrepos.png',
+    OWNER_NAME: process.env.OWNER_NAME || "Qartde",
+    NUMERO_OWNER: process.env.NUMERO_OWNER || "255693629079", 
+    BOT: process.env.BOT_NAME || 'RAHMANI-XMD',
+    URL: process.env.BOT_MENU_LINKS || 'https://files.catbox.moe/aktbgo.jpg',
+    GURL: 'https://whatsapp.com/channel/0029VatokI45EjxufALmY32X',
 
     // Fallback defaults for the database-backed toggle settings (see
     // plugins/Settings/settings.js for the commands that override these
