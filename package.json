@@ -1,7 +1,7 @@
 {
-  "name": "BMB-TECH",
+  "name": "RAHMANI-XMD",
   "version": "1.1.0",
-  "description": "bmb-tech-Whatsapp-bot",
+  "description": "rahmani-xmd-Whatsapp-bot",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
@@ -17,7 +17,7 @@
     "bmb-xmd",
     "bmb-tech-Whatsapp-bot"
   ],
-  "author": "BMB-TECH",
+  "author": "RAHMANI-XMD",
   "license": "ISC",
   "dependencies": {
     "@whiskeysockets/baileys": "npm:bmbtech-baileys@latest",
