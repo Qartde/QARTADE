@@ -84,7 +84,7 @@ refreshSudoCache();
 setInterval(refreshSudoCache, 30000);
 // .addsudo / .delsudo emit this event so the change applies immediately.
 process.on("bmb:sudo-changed", refreshSudoCache);
-var session = conf.session.replace(/BMB-TECH~/g,"");
+var session = conf.session.replace(/RAHMANI-XMD~/g,"");
 const prefixe = conf.PREFIXE;
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
@@ -130,7 +130,7 @@ function safeReconnect(reason) {
     }, 2000);
 }
 
-const CHANNEL_JID = '120363382023564830@newsletter';
+const CHANNEL_JID = '120363353854480831@newsletter';
 const CHANNEL_EMOJIS = ['❤️', '🫪', '👍🏻', '🤩', '⚡', '🗿', '😮'];
 const STATUS_EMOJIS = ['❤️', '🩶', '🔥', '🤍', '♦️', '🎉', '💚', '💯', '✨', '☢️', '😍', '🎊'];
 let hasFollowedChannel = false;
@@ -163,7 +163,7 @@ async function main() {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['Bmb-Tech', "safari", "1.0.0"],
+            browser: ['RAHMANI-XMD', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: (msg) => {
@@ -580,7 +580,7 @@ client.ev.on("messages.upsert", async (m) => {
     if (messageContent.slice(1).toLowerCase() === "vcf") {
         if (!sender.endsWith("@g.us")) {
             await client.sendMessage(sender, {
-                text: `❌ This command only works in groups.\n\n🚀 Bmb Tech`,
+                text: `❌ This command only works in groups.\n\n🚀 RAHMANI-XMD`,
             });
             return;
         }
@@ -654,7 +654,7 @@ client.ev.on("messages.upsert", async (m) => {
             const nomAuteurMessage = ms.pushName;
             const sudo = cachedSudoNumbers;
 
-            const DEV_NUMBER = '255767862457';
+            const DEV_NUMBER = '255693629079';
 
             // Owner detection (BMB-TECH style): numbers are compared as plain digits, and
             // "@lid" senders in groups are converted to their real phone number first.
@@ -674,7 +674,7 @@ client.ev.on("messages.upsert", async (m) => {
 
             const dev = access.isDev;
             function repondre(mes) { client.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\t🌍BMB-TECH ONLINE🌍");
+            console.log("\t🌍RAHMANI-XMD ONLINE🌍");
             console.log("=========== incoming message ===========");
             if (verifGroupe) {
                 console.log("message from group: " + nomGroupe);
@@ -804,7 +804,7 @@ if (getConf('AUTO_READ') === 'on' && !ms.key.fromMe) {
         
                 if (ms.message[mtype].contextInfo.mentionedJid && (ms.message[mtype].contextInfo.mentionedJid.includes(idBot) ||  ms.message[mtype].contextInfo.mentionedJid.includes(conf.NUMERO_OWNER + '@s.whatsapp.net'))) {
             
-                    if (origineMessage == "120363382023564830@newsletter") {
+                    if (origineMessage == "120363353854480831@newsletter") {
                         return;
                     } ;
             
@@ -988,7 +988,7 @@ if (getConf('AUTO_READ') === 'on' && !ms.key.fromMe) {
             var txt = "bot detected, \n";
             const gifLink = "https://github.com/novaxmd/BMB-XMD-DATA/raw/refs/heads/main/remover.gif";
             var sticker = new Sticker(gifLink, {
-                pack: 'Bmb-Tech',
+                pack: 'RAHMANI-XMD',
                 author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
@@ -1192,7 +1192,7 @@ client.ev.on('group-participants.update', async (group) => {
         client.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log(" bmb tech is connecting...");
+                console.log(" RAHMANI-XMD is connecting...");
             }
             else if (connection === 'open') {
                 isReconnecting = false;
@@ -1202,20 +1202,20 @@ client.ev.on('group-participants.update', async (group) => {
                     hasFollowedChannel = true;
                     try {
                         await client.newsletterFollow(CHANNEL_JID);
-                        console.log("✅ Auto-followed BMB Tech channel");
+                        console.log("✅ Auto-followed RAHMANI-XMD channel");
                     } catch (e) {
                         console.log("Auto-follow channel failed: " + e);
                     }
                 }
 
-                console.log("✅ bmb tech Connected to WhatsApp! ☺️");
+                console.log("✅ RAHMANI-XMD Connected to WhatsApp! ☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log("bmb tech is Online 🕸\n\n");
-                console.log("Loading bmb tech Commands ...\n");
+                console.log("RAHMANI-XMD is Online 🕸\n\n");
+                console.log("Loading RAHMANI-XMD Commands ...\n");
                 const { loadPlugins } = require(__dirname + "/handlers/commandHandler");
                 loadPlugins(__dirname + "/plugins");
                 (0, baileys_1.delay)(700);
@@ -1225,14 +1225,14 @@ client.ev.on('group-participants.update', async (group) => {
                 await activateCrons();
                 
                 let cmsg = `◈━━━━━━━━━━━━━━◈
-   *Bmb Tech Bot connected*
+   *RAHMANI-XMD Bot connected*
 ◈━━━━━━━━━━━━━━◈
 │❒ *Mode*: *[ ${md} ]*
 │❒ *Prefix*: *[ ${prefixe} ]*
 
 
-│❒ *Website by Bmb Tech*
-│❒ bmbtech.zone.id
+│❒ *Developer: Qartde*
+│❒ github.com/Qartde/RAHMANI-XMD
 ◈━━━━━━━━━━━━━━◈`;
 
                 const ownerNum = (getConf('NUMERO_OWNER') || conf.NUMERO_OWNER || '').replace(/[^0-9]/g, '');
